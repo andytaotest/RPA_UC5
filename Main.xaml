@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1254,817.3333333333334" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="580.6666666666666,538" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -104,15 +104,9 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetFilesFromFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetFilesFromFolder.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="In_FolderName">
-              <Literal x:TypeArguments="x:String">Files</Literal>
-            </InArgument>
-            <OutArgument x:TypeArguments="s:String[]" x:Key="Out_ArrOfFiles">
-              <VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="ArrOfFiles" />
-            </OutArgument>
-            <OutArgument x:TypeArguments="x:Int32" x:Key="Out_Count">
-              <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="Count" />
-            </OutArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="In_FolderName">Files</InArgument>
+            <OutArgument x:TypeArguments="s:String[]" x:Key="Out_ArrOfFiles">[ArrOfFiles]</OutArgument>
+            <OutArgument x:TypeArguments="x:Int32" x:Key="Out_Count">[Count]</OutArgument>
           </ui:InvokeWorkflowFile.Arguments>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -121,10 +115,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
         <FlowStep.Next>
-          <FlowDecision x:Name="__ReferenceID0" DisplayName="Have classified all files?" sap:VirtualizedContainerService.HintSize="127.33333333333333,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-            <FlowDecision.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Count = 0" />
-            </FlowDecision.Condition>
+          <FlowDecision x:Name="__ReferenceID0" Condition="[Count = 0]" DisplayName="Have classified all files?" sap:VirtualizedContainerService.HintSize="127.33333333333333,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,7 +152,7 @@
                         <av:Size x:Key="ShapeSize">200,54</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The End&quot;]">
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The process has ended.&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,10 +164,7 @@
               </FlowStep>
             </FlowDecision.True>
             <FlowDecision.False>
-              <FlowDecision x:Name="__ReferenceID2" DisplayName="Is OT File?" sap:VirtualizedContainerService.HintSize="70,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                <FlowDecision.Condition>
-                  <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ArrOfFiles(Count-1).ToUpper.Contains(&quot;OVER&quot;) and ArrOfFiles(Count-1).ToUpper.Contains(&quot;XLSX&quot;)" />
-                </FlowDecision.Condition>
+              <FlowDecision x:Name="__ReferenceID2" Condition="[ArrOfFiles(Count-1).ToUpper.Contains(&quot;OVER&quot;) and ArrOfFiles(Count-1).ToUpper.Contains(&quot;XLSX&quot;)]" DisplayName="Is OT File?" sap:VirtualizedContainerService.HintSize="70,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
