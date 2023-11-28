@@ -1,0 +1,269 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1254,817.3333333333334" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="450,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="1140.6666666666667,732.6666666666666" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="s:String[]" Name="ArrOfFiles" />
+        <Variable x:TypeArguments="x:Int32" Name="Count" />
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">471,0</av:Point>
+          <av:Size x:Key="ShapeSize">60,74.66666666666667</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">501,74.66666666666667 501,125</av:PointCollection>
+          <x:Double x:Key="Width">1107</x:Double>
+          <x:Double x:Key="Height">695.4133333333332</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID7</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">401,125</av:Point>
+            <av:Size x:Key="ShapeSize">200,54</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">501,179 501,209 501.6666666666667,209 501.6666666666667,229</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetFilesFromFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetFilesFromFolder.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="In_FolderName">
+              <Literal x:TypeArguments="x:String">Files</Literal>
+            </InArgument>
+            <OutArgument x:TypeArguments="s:String[]" x:Key="Out_ArrOfFiles">
+              <VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="ArrOfFiles" />
+            </OutArgument>
+            <OutArgument x:TypeArguments="x:Int32" x:Key="Out_Count">
+              <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="Count" />
+            </OutArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+        <FlowStep.Next>
+          <FlowDecision x:Name="__ReferenceID0" DisplayName="Have classified all files?" sap:VirtualizedContainerService.HintSize="127.33333333333333,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <FlowDecision.Condition>
+              <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Count = 0" />
+            </FlowDecision.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <av:Point x:Key="ShapeLocation">438,229</av:Point>
+                <av:Size x:Key="ShapeSize">127.33333333333333,86.66666666666667</av:Size>
+                <av:PointCollection x:Key="FalseConnector">565.3333333333334,272.3333333333333 591,272.3333333333333 591,336 501,336 501,366</av:PointCollection>
+                <av:PointCollection x:Key="TrueConnector">438,272.3333333333333 230,272.3333333333333 230,283</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <FlowDecision.True>
+              <FlowStep x:Name="__ReferenceID5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">130,283</av:Point>
+                    <av:Size x:Key="ShapeSize">200,54</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">230,337 230,387</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessOTFiles.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ProcessOTFiles.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">130,387</av:Point>
+                        <av:Size x:Key="ShapeSize">200,54</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The End&quot;]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:MessageBox>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowDecision.True>
+            <FlowDecision.False>
+              <FlowDecision x:Name="__ReferenceID2" DisplayName="Is OT File?" sap:VirtualizedContainerService.HintSize="70,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                <FlowDecision.Condition>
+                  <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ArrOfFiles(Count-1).ToUpper.Contains(&quot;OVER&quot;) and ArrOfFiles(Count-1).ToUpper.Contains(&quot;XLSX&quot;)" />
+                </FlowDecision.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">466,366</av:Point>
+                    <av:Size x:Key="ShapeSize">70,86.66666666666667</av:Size>
+                    <av:PointCollection x:Key="TrueConnector">466,409.3333333333333 436.00000000000006,409.3333333333333 436.00000000000006,349.3333333333333 1006,349.3333333333333 1006,540 980,540</av:PointCollection>
+                    <av:PointCollection x:Key="FalseConnector">536,409.3333333333333 566,409.3333333333333 566,410 730,410</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <FlowDecision.True>
+                  <FlowStep x:Name="__ReferenceID3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">780,513</av:Point>
+                        <av:Size x:Key="ShapeSize">200,54</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">780,540 750,540 750,483 1080,483 1080,250 1067,250</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="OT" DisplayName="Move File &quot;OT&quot;" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[ArrOfFiles(Count-1)]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:MoveFile>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">633,207.33333333333334</av:Point>
+                            <av:Size x:Key="ShapeSize">434,85.33333333333333</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">633,250 603,250 603,199 533.5,199 533.5,229</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[Count - 1]</InArgument>
+                          </Assign.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Assign>
+                        <FlowStep.Next>
+                          <x:Reference>__ReferenceID0</x:Reference>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowDecision.True>
+                <FlowDecision.False>
+                  <FlowStep x:Name="__ReferenceID4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">730,383</av:Point>
+                        <av:Size x:Key="ShapeSize">200,54</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">930,410 1097,410 1097,250 1067,250</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Other files" DisplayName="Move File &quot;Others&quot;" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[ArrOfFiles(Count-1)]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:MoveFile>
+                    <FlowStep.Next>
+                      <x:Reference>__ReferenceID1</x:Reference>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowDecision.False>
+              </FlowDecision>
+            </FlowDecision.False>
+          </FlowDecision>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>
